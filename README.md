@@ -89,6 +89,7 @@ class MyHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
+        
 
 server_address = ('', 8000)
 httpd = HTTPServer(server_address, MyHandler)
