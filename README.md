@@ -57,6 +57,7 @@ content = """
             <td>Microsoft</td>
             <td>65 billion</td>
         </tr>
+    
         <tr>
             <td>2</td>
             <td>Oracle</td>
