@@ -57,7 +57,7 @@ content = """
             <td>Microsoft</td>
             <td>65 billion</td>
         </tr>
-         <tr>
+        <tr>
             <td>2</td>
             <td>Oracle</td>
             <td>29.6 billion</td>
@@ -81,6 +81,7 @@ content = """
 </body>
 </html>
 """
+
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("Request received")
@@ -88,11 +89,12 @@ class MyHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
-        
+
 server_address = ('', 8000)
 httpd = HTTPServer(server_address, MyHandler)
 print("My webserver is running...")
 httpd.serve_forever()
+
 ## OUTPUT:
 <img width="261" height="220" alt="Screenshot 2026-10-22 092157" src="https://github.com/user-attachments/assets/f214f868-9c5c-439f-b523-b7b6dc650aba" />
 <img width="1413" height="248" alt="Screenshot 2026-10-22 092545" src="https://github.com/user-attachments/assets/d39538a8-cae1-4e26-8ed3-77302c37c048" />
